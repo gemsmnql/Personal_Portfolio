@@ -1,0 +1,26 @@
+.nav-link {
+    font-family: "Coolvetica";
+    text-transform: uppercase;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background-color: var(--red-color);
+    color: var(--white-color);
+    transition: var(--transition);
+    padding: 0 15px;
+    border-radius: 50px;
+}
+
+.active {
+    background-color: var(--red-color);
+    color: var(--white-color);
+    transition: var(--transition);
+    padding: 0 15px;
+    border-radius: 50px;
+}
+
+.time {
+    font-family: "Helvetica Neue";
+}

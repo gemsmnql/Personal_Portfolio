@@ -1,0 +1,105 @@
+<section class="hero">
+    <div class="hero-container flex mx-[100px]">
+        <div class="picture relative">
+            <div class="flex justfify-end relative left-106 bottom-38" data-aos="fade-left" data-aos-duration="1000">
+                <img src = "assets/images/blurry.png" alt="Blurry Picture of the Developer" class="w-[1380px] h-[950px] object-contain grayscale">
+            </div>
+            
+            <div class="absolute bottom-75 " data-aos="fade-up" data-aos-duration="1000">
+              <img src = "assets/images/picture.jpg" alt="Picture of the Developer" class="h-[400px] w-[595px] object-contain">  
+                <div class="caption">
+                    <h2 class = "font-semibold text-[35px]">Hi! I’m James Mananquil</h2>
+                    <p class = "text-[18px]">Web Developer | UI/UX Enthusiast</p>
+                </div>
+            </div>
+
+            <div class="absolute bottom-80 left-130 flex-col leading-[0.75]" data-aos="fade-down" data-aos-duration="1000">
+                <div class="front-end flex gap-180">
+                    <h1>FRONT</h1>
+                    <h1>END</h1>
+                </div> 
+                <div class="">
+                    <h1 class ="developer">DEVELOPER</h1>
+                </div>
+                <div class="flex absolute top-100 right-0">
+                    <a routerLink="/projects" class = "view-btn cursor-pointer">
+                    View Portfolio <i class="fa-solid fa-arrow-down fa-rotate-by fa-sm" style="--fa-rotate-angle: -45deg;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="what-i-do ">
+    <div class="what-i-do-container mx-[100px] mb-15">
+        <h1 class = "text-[64px]">What I Do</h1>
+
+        <div class="flex flex-col gap-5 mt-7">
+            <div class="flex justify-start gap-15">
+                <div class="info-container" [class.active]="activeSkill === 'designing'" 
+             (click)="toggleSkill('designing')">
+                    <h2>Designing</h2>
+                    <p>I design clean, modern, and user-friendly interfaces that focus on usability, visual balance, and accessibility.</p> 
+                </div>
+
+                <div class="info-container"[class.active]="activeSkill === 'frontend'" 
+             (click)="toggleSkill('frontend')">
+                    <h2>Front-End Development</h2>
+                    <p>I build responsive and interactive websites using HTML, CSS, and JavaScript with modern best practices.</p> 
+                </div>
+
+                <div class="info-container" [class.active]="activeSkill === 'responsive'" 
+             (click)="toggleSkill('responsive')">
+                    <h2>Responsive Design</h2>
+                    <p>I ensure websites function perfectly across all devices, from desktops to mobile phones, using fluid layouts and media queries for a seamless transition.</p> 
+                </div>
+            </div>
+
+            <div class="flex justify-end gap-10">
+                <div class="info-container" [class.active]="activeSkill === 'UI Implementation'" 
+             (click)="toggleSkill('UI Implementation')">
+                    <h2>UI Implementation</h2>
+                    <p>I bridge the gap between design and code, accurately translating high-fidelity mockups into functional, interactive web components.</p> 
+                </div>
+
+                <div class="info-container" [class.active]="activeSkill === 'optimization'" 
+             (click)="toggleSkill('optimization')">
+                    <h2>Optimization</h2>
+                    <p>I focus on performance by optimizing assets and code to ensure fast loading times, smooth animations, and high SEO rankings.</p> 
+                </div>
+
+                <div class="info-container" [class.active]="activeSkill === 'version control'" 
+             (click)="toggleSkill('version control')">
+                    <h2>Version Control</h2>
+                    <p>I utilize Git and GitHub to manage project history, collaborate effectively with teams, and maintain organized, deployable codebases.</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projects-section mx-[100px] my-20">
+  <h1 class="text-[64px] font-bold mb-10">Projects</h1>
+
+  <div class="projects-wrapper grid grid-cols-3 gap-4 transition-all duration-500" data-aos="fade-up" data-aos-duration="700">
+    <div *ngFor="let project of projects" 
+         class="project-card relative overflow-hidden cursor-pointer"
+         [class.active]="activeProject === project.id"
+         (click)="selectProject(project.id)">
+      
+      <div class="img-box h-[450px] w-full">
+        <img [src]="project.image" class="w-full h-full object-cover object-top transition-all">
+      </div>
+
+      <div class="project-info mt-4">
+        <div class="flex justify-between items-center">
+          <h3 class="text-3xl font-semibold">{{ project.title }}</h3>
+          <span class="text-base text-[#AEAEAE] italic">{{ project.type }}</span>
+        </div>
+        <p class="mt-5 text-lg">{{ project.desc }} </p>
+        <a [href]="project.link" target="_blank" class="view-link inline-block items-end mt-4 underline border-black">VIEW PROJECT <i class="fa-solid fa-arrow-down fa-rotate-by" style="color: var(--red-color)"></i></a>
+      </div>
+    </div>
+  </div>
+</section>

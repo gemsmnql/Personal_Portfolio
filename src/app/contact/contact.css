@@ -1,0 +1,57 @@
+.socials{
+    font-family: "Helvetica Neue";
+}
+
+.right {
+    font-family: "Helvetica Italic";
+}
+
+.input-field {
+    border-bottom: 2px solid black;
+    padding: 5px;
+}
+
+.submit-btn {
+    color: var(--red-color);
+    font-family: "Helvetica Black";
+}
+
+.submit-btn:hover {
+    color: var(--red-hover-color);
+    transition: 0.3s;
+}
+
+.right-contain {
+    border: 5px solid var(--red-color);
+}
+
+.got-idea h1{
+    font-family: "Vanguard";
+}
+
+.got-idea h2 {
+    font-family: "Helvetica Neue";
+}
+
+.left p {
+    font-family: "Helvetica Light";
+    color: #7D7B7B;
+}
+.emails p {
+    font-family: "Helvetica Italic";
+    color: var(--red-color);
+    font-size: 20px;
+}
+
+.emails h2 {
+    font-family: "Coolvetica";
+}
+
+.socials i {
+    transition: all 0.2s ease-in-out;
+    transform: rotate(225deg);
+}
+
+.socials a:hover i{
+    transform: translate(3px, -2px) rotate(225deg);
+}

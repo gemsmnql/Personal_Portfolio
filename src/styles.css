@@ -1,3 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url(assets/fonts/CoolveticaRg.otf);
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url(assets/fonts/HelveticaNeueMedium.otf);
+}
+
+@font-face {
+    font-family: "Vanguard";
+    src: url(assets/fonts/Fontspring-DEMO-vanguardcf-bold.otf);
+}
+
+@font-face {
+    font-family: "Integral";
+    src: url(assets/fonts/Fontspring-DEMO-integralcf-bold.otf);
+}
+
+@font-face {
+    font-family: "Helvetica Italic";
+    src: url(assets/fonts/HelveticaNeueItalic.ttf);
+}
+
+@font-face {
+    font-family: "Helvetica Black";
+    src: url(assets/fonts/HelveticaNeueBlack.otf);
+}
+
+@font-face {
+    font-family: "Helvetica Light";
+    src: url(assets/fonts/HelveticaNeueLight.otf);
+}
+
+@font-face {
+    font-family: "Helvetica Regular";
+    src: url(assets/fonts/HelveticaNeueRoman.otf);
+}
+
+@font-face {
+    font-family: "Helvetica Thin";
+    src: url(assets/fonts/HelveticaNeueThin.otf);
+}
+
+:root {
+    --red-color: #DC0E0E;
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+    --yellow-color: #FFD752;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}

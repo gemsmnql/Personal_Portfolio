@@ -1,0 +1,57 @@
+/* Projects Section */
+.projects h1 {
+    font-family: "Helvetica Black";
+    font-size: 4rem;
+}
+
+.project-card {
+    border-bottom : 2px solid #E0E0E0;
+}
+
+.project-details h1 {
+    font-family: "Coolvetica";
+    color: var(--red-color);
+    font-size: 3rem;
+}
+
+.view-link {
+    font-family: "Helvetica neue";
+}
+
+.view-link i {
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(225deg);
+}
+
+.view-link:hover i {
+  transform: translate(4px, -5px) rotate(225deg);
+}
+
+.type p{
+    font-family: "Helvetica Italic";
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #AEAEAE; /* Matches your text color */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--red-color); /* Matches your arrow color */
+}
+
+.number {
+    font-family: "Helvetica Regular";
+}
+
+.desc {
+    font-family: "Helvetica Light";
+}

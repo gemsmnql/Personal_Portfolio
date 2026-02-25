@@ -1,0 +1,59 @@
+.footer-container {
+    border-top: 2px solid #E0E0E0;
+}
+
+/* Left */
+.left-info {
+    font-family: "Helvetica Neue";
+
+}
+
+.left p {
+    font-family: "Helvetica Light";
+    color: #7D7B7B;
+}
+.socials{
+    font-family: "Helvetica Neue";
+}
+
+.socials i {
+    transition: all 0.2s ease-in-out;
+    transform: rotate(225deg);
+}
+
+.socials a:hover i{
+    transform: translate(3px, -2px) rotate(225deg);
+}
+
+
+/* Right */
+.right {
+    font-family: "Helvetica Italic";
+}
+
+.input-field {
+    border-bottom: 2px solid black;
+    padding: 5px;
+}
+
+.submit-btn {
+    color: var(--red-color);
+    font-family: "Helvetica Black";
+}
+
+.submit-btn:hover {
+    color: var(--red-hover-color);
+    transition: 0.3s;
+}
+
+/* Lower */
+.lower {
+    font-family: "Helvetica Light";
+    
+}
+
+.footer-name {
+    
+    font-family: "Coolvetica";
+}
+

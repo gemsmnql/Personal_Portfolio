@@ -1,0 +1,173 @@
+/* Contact */
+.left {
+    border-right: 2px solid var(--red-color);
+    border-left: 2px solid var(--red-color);
+}
+
+.picture img{
+ border: 2px solid black;
+ border-radius: 20px;
+}
+
+.contact h1, .education h1, .references h1, .skills h1, .projects h1, .cert h1 {
+    font-family: "Coolvetica";
+}
+
+.contact-detail {
+    font-family: "Helvetica Regular";
+    font-size: 18px;
+}
+
+.links {
+    font-family: "Helvetica Regular";
+}
+
+/* Education */
+.educ-info h2{
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+}
+
+.educ-info p {
+    font-family: "Helvetica Light";
+}
+
+.educ-detail h2{
+    font-family: "Helvetica Regular";
+    font-size: 25px;
+    color: var(--red-color);
+}
+
+.educ-detail p {
+    font-family: "Helvetica Thin";
+    font-size: 35px;
+}
+
+/* References */
+
+/* Download Button */
+.dl-btn {
+    font-family: "Helvetica Neue";
+    border: 3px solid var(--red-color);
+    font-size: 30px;
+    color: black;
+    padding: 40px 20px;
+    border-radius: 16px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.dl-btn:hover {
+    background-color: var(--red-color);
+    color: white;
+    transform: translate(4px, -5px);
+}
+
+.dl-btn i {
+    transition: color 0.3s ease-in-out;
+    color: var(--red-color);
+}
+
+.dl-btn:hover i {
+    color: white;
+    transform: translate(4px, -5px) rotate(225deg);
+
+}
+
+
+/* Name */
+
+.james-carl h1{
+    font-family: "Helvetica Neue";
+    font-size: 70px;
+}
+
+.last-name{
+    font-size: 150px;
+    font-family: "Integral";
+    color: var(--red-color);
+}
+.name h2 {
+    font-family: "Coolvetica";
+    font-size: 20px;
+}
+
+/* Profile */
+
+.profile h1 {
+    font-family: "Coolvetica";
+}
+.profile-info  {
+    background-color: #F4F4F4;
+}
+
+.profile-info p {
+    font-family: "Helvetica Neue";
+}
+
+.quote {
+    font-family: "Coolvetica"
+}
+
+/* Skills */
+
+ul {
+    list-style-type:disc;
+}
+
+li {
+    font-family: "Helvetica Regular";
+    font-size: 20px;
+}
+
+
+li::marker {
+    color: var(--red-color);
+}
+
+.tech-skills h2, .tools h2, .soft-skills h2 {
+    font-family: "Coolvetica";
+    font-size: 30px;
+    color: var(--red-color);
+}
+
+/* Projects */
+.number {
+    font-family: "Vanguard";
+    color: var(--red-color);
+}
+
+.proj-title h2 {
+    font-family: "Coolvetica";
+    font-size: 25px;
+}
+.proj-title p {
+    font-family: "Helvetica Italic";
+    font-size: 15px;
+}
+
+.proj-desc {
+    font-family: "Helvetica Regular";
+    font-size: 17px;
+}
+
+/* Certifications */
+.cert h3 {
+    font-family: "Coolvetica";
+    font-size: 25px;
+    color: var(--red-color);
+}
+
+.date {
+    font-family: "Helvetica Regular";
+    font-size: 17px;
+}
+
+.desc {
+    font-family: "Helvetica Light";
+    font-size: 17px;
+}
+
+.num {
+    font-family: "Integral";
+    font-size: 150px;
+}

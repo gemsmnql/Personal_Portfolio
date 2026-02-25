@@ -1,0 +1,161 @@
+.about-info h1{
+    font-family: "Helvetica Black";
+}
+
+.about-info p{
+    font-family: "Helvetica Light";
+    text-align: justify;
+}
+
+.about-name h1{
+    font-family: "Coolvetica";
+    line-height: 70%;
+}
+
+.about-info .info {
+    border: 1px solid #D9D9D9;
+    padding: 25px;
+}
+
+.about-info .info h1 {
+    font-family: "Helvetica Black";
+    color: var(--red-color)
+}
+
+.about-info .info p {
+    font-family: "Coolvetica";
+    font-size: 16px;
+}
+
+/* Technical Skills*/
+.skill-card {
+    background-color: #f3f3f3;
+    height: 550px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%; 
+    background-color: var(--red-color);
+    z-index: 1;
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.skill-card:hover::before {
+    height: var(--progress);
+}
+
+.percentage, .skill-card h2 {
+    z-index: 2;
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Helvetica Neue";
+}
+
+.percentage {
+    font-size: 70px;
+    color: black;
+}
+
+.skill-card:hover h2 {
+    color: white;
+}
+
+.skills-container h1 {
+    font-family: "Helvetica Black";
+}
+
+/* Certifications */
+.scrollbar-hide {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;    
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;       
+}
+
+.cert-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.cert-card:hover img {
+    filter: grayscale(0%);
+}
+
+.cert-card:hover h2 {
+    color: var(--red-color);
+}
+
+.cert-card h2 {
+    font-family: "Helvetica Neue";
+    margin-top: 10px;
+}
+
+.large-cert-display {
+    border: 1px solid #ddd;
+    transition: all 0.5s ease;
+}
+
+.cert-container h1 {
+    font-family: "Helvetica Black";
+}
+
+.cert-card span {
+    font-family: "Helvetica Light", sans-serif;
+}
+
+.cert-view h2 {
+    font-family: "Helvetica Black", sans-serif;
+    color: var(--red-color);
+    font-size: 21px;
+}
+
+.cert-view p {
+    font-family: "Helvetica Light", sans-serif;
+    font-size: 16px;
+} 
+
+.parenth {
+    font-family: "Coolvetica";
+    font-size: 400px;
+    color: var(--red-color);
+}
+
+#view-cert {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 12px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* Feedback */
+.upper h1 {
+    font-family: "Helvetica Black";
+    font-size: 50px;
+}
+
+.comment p, .name p {
+    font-family: "Helvetica Light";
+}
+
+.name h2 {
+    font-family: "Helvetica Black";
+}
+
+.image-part h1 {
+    font-family: "Coolvetica";
+}

@@ -1,0 +1,33 @@
+<section class="projects mx-[100px] mt-20 mb-40">
+    <h1 data-aos="fade-up" data-aos-duration="900">Projects</h1>
+
+    <div *ngFor = "let project of projects" class="project-card flex justify-between items-start py-15 transition-all duration-500 overflow-hidden" [class.pb-20]="activeProjectId === project.id">
+        <div class="cursor-pointer relative transition-all duration-500 ease-in-out overflow-hidden hover:w-[950px] hover:h-[500px]"
+            [ngClass]="activeProjectId === project.id ? 'w-[950px] h-[500px] overflow-y-auto custom-scrollbar' : 'w-[600px] h-[330px]'"
+            (click)="toggleProject(project.id)">
+            
+            <img [src]="project.images[project.currentImageIndex]" 
+                alt="Project Image" 
+                class="project-image object-top w-full object-cover transition-all duration-500 ease-in-out" 
+                [ngClass]="activeProjectId === project.id ? 'scale-100' : 'h-[500px]'" data-aos="fade-right" data-aos-duration="900">
+
+            <button *ngIf="activeProjectId === project.id && project.images.length > 1"
+                    (click)="nextImage($event, project)"
+                    class="absolute right-5 top-1/2 -translate-y-1/2 bg-white border-2 border-[var(--red-color)] p-4 rounded-full shadow-lg transition-all hover:bg-[var(--red-color)] group">
+                <i class="fa-solid fa-chevron-right text-black"></i>
+            </button>
+        </div>
+
+        <p class = "number" data-aos="fade-up" data-aos-duration="900">{{ project.number }}</p>
+
+        <div class="project-details flex flex-col gap-5 w-[500px]" data-aos="fade-up" data-aos-duration="900">
+            <h1 class = "font-bold">{{ project.name }}</h1>
+            <p class = "desc">{{ project.description }}</p>
+            
+            <div class="type flex items-center justify-between">
+                <p class = "type text-[#AEAEAE]">{{ project.type }}</p>
+                <a [href]="project.link" target= "_blank" class="view-link inline-block underline border-black font-bold">VIEW PROJECT<i class="fa-solid fa-arrow-down fa-rotate-by" style="color: var(--red-color)"></i></a>
+            </div>
+        </div>
+    </div>
+</section>

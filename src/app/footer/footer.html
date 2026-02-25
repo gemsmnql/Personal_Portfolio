@@ -1,0 +1,54 @@
+<footer>
+    <div class="footer-container mx-[100px]">
+        <div class="upper grid grid-cols-2 gap-30 py-[50px]">
+
+            <div class="left max-w-[500px]" data-aos="fade-up" data-aos-duration="1000">
+                <div class="left-info leading-[.9]">
+                    <h2 class = "text-[32px]">+63 0905 379 1571</h2>
+                    <h2 class = "text-[35px]">jamescarlmananquil@gmail.com</h2>
+                </div>
+
+                <div class="socials underline flex justify-between text-[14px] my-5">
+                    <a href="https://www.instagram.com/gemsmnql/" target="_blank">INSTAGRAM<i class="fa-solid fa-arrow-down fa-rotate-by ml-1 " style="color: var(--red-color)"></i></a>
+                    <a href="https://www.tiktok.com/@gemsmnql" target="_blank">TIKTOK<i class="fa-solid fa-arrow-down fa-rotate-by ml-1" style="color: var(--red-color)"></i></a>
+                    <a href="https://www.facebook.com/gemsmnql/" target="_blank">FACEBOOK<i class="fa-solid fa-arrow-down fa-rotate-by ml-1" style="color: var(--red-color)"></i></a>
+                </div>
+
+                <p class = "text-[15px] w-[300px] mt-15">Address: District 15 Block 49 Lot 12 Pandacaqui Mexico Pampanga</p>
+            </div>
+
+            <div class="right w-full" data-aos="fade-left" data-aos-duration="1000">
+                <form (submit)="sendEmail($event)" class="flex flex-col gap-5 w-full text-[20px]">
+                    
+                    <input type="text" name="from_name" placeholder="Full Name" class="input-field" required>
+                    <input type="number" name="phone_number" placeholder="Phone" class="input-field">
+                    <input type="email" name="reply_to" placeholder="Email" class="input-field" required>
+                    <input type="text" name="message" placeholder="Message" class="input-field" required>
+                    
+                    <button type="submit" class="submit-btn mt-7 underline text-[32px] text-left" data-aos="fade-left" data-aos-duration="1000">
+                        SEND REQUEST
+                    </button>
+                    
+                </form>
+            </div>
+            
+        </div>
+
+        <div class="lower">
+            <div class="soc-links flex justify-between">
+                <a href="https://www.facebook.com/gemsmnql/" target="_blank" class = "hover:underline">[ LINKEDIN ]</a>
+                <a href="https://github.com/gemsmnql" target="_blank" target="_blank" class = "hover:underline">[ GITHUB ]</a>
+                <a href="https://www.linkedin.com/in/james-carl-mananquil-9b1b4b1b3/" target="_blank" class = "hover:underline">[ EMAIL ]</a>
+            </div>
+
+            <div class="footer-name leading-[1.1]" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class = "text-[12rem] text-center">JAMES MANANQUIL</h1>
+            </div>
+
+            <div class="other-details flex justify-between">
+                <p>AC, Philippines: {{ Todaydate | date:'(z) h:mm:ss a' }}</p>
+                <p>© All Rights Reserved. 2026 JamesMananquil</p>
+            </div>
+        </div>
+    </div>
+</footer>
