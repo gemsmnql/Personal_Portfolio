@@ -1,16 +1,24 @@
-<div class="nav-bar relative">
-    <nav class = "nav-container flex gap-[50px] mt-[60px] mx-[100px] items-center z-10 top-0 w-full sticky z-10 bg-transparent">
-        <a routerLink = "home" class = "logotext flex items-center">
-            <img src="assets/images/logo/logo.png" alt="Logo" class="logoheader w-[100px] h-[100px] hover:scale-105 transition">
+<div class="nav-bar fixed top-0 left-0 w-full z-[100] lg:sticky transition-all duration-300">
+    <nav class = "nav-container flex justify-between lg:justify-start lg:gap-[50px] mx-[20px] mt-[20px] lg:mt-[60px] lg:mx-[100px] items-center z-10 bg-transparent">
+        <a routerLink="home" class="logotext flex items-center">
+            <img src="assets/images/logo/logo.png" alt="Logo" 
+                class="logoheader w-[100px] h-[100px] hover:scale-105 transition hidden lg:block">
+            <img src="assets/images/logo/favlogo.png" alt="Logo" 
+                class="w-[70px] h-[70px] hover:scale-105 transition block lg:hidden">
         </a>
 
-        <ul class = "nav-links flex gap-[50px] text-[20px]">
-            <li><a routerLink="home" class="nav-link" routerLinkActive="active">Home</a></li>
-            <li><a routerLink="about" class="nav-link" routerLinkActive="active">About</a></li>
-            <li><a routerLink="projects" class="nav-link" routerLinkActive="active">Projects</a></li>
-            <li><a routerLink="resume" class="nav-link" routerLinkActive="active">Resume</a></li>
-            <li><a routerLink="contact" class="nav-link" routerLinkActive="active">Contact</a></li>   
+        <button (click)="toggleMenu()" class="lg:hidden z-50 text-3xl focus:outline-none">
+            <i class="fa-solid" [ngClass]="isMenuOpen ? 'fa-xmark text-white' : 'fa-bars text-white'"></i>
+        </button>
+
+        <ul [class.translate-x-0]="isMenuOpen" 
+        [class.translate-x-full]="!isMenuOpen"
+        class="nav-links fixed top-0 right-0 h-screen w-full bg-black/90 text-white flex flex-col items-center justify-center gap-10 text-[24px] transition-transform duration-300 ease-in-out lg:static lg:h-auto lg:w-auto lg:bg-transparent lg:text-black lg:flex-row lg:gap-[50px] lg:text-[20px] lg:translate-x-0">
+            <li><a routerLink="home" (click)="isMenuOpen = false" class="nav-link" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="about" (click)="isMenuOpen = false" class="nav-link" routerLinkActive="active">About</a></li>
+            <li><a routerLink="projects" (click)="isMenuOpen = false" class="nav-link" routerLinkActive="active">Projects</a></li>
+            <li><a routerLink="resume" (click)="isMenuOpen = false" class="nav-link" routerLinkActive="active">Resume</a></li>
+            <li><a routerLink="contact" (click)="isMenuOpen = false" class="nav-link" routerLinkActive="active">Contact</a></li>   
         </ul>
- 
     </nav>
 </div>

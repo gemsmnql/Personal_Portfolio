@@ -1,27 +1,27 @@
 <section class="hero">
-    <div class="hero-container flex mx-[100px]">
+    <div class="hero-container flex mx-[20px] lg:mx-[100px]">
         <div class="picture relative">
             <div class="flex justfify-end relative left-106 bottom-38" data-aos="fade-left" data-aos-duration="1000">
-                <img src = "assets/images/blurry.webp" alt="Blurry Picture of the Developer" class="w-[1380px] h-[950px] object-contain grayscale">
+                <img src = "assets/images/blurry.webp" alt="Blurry Picture of the Developer" class="w-[1380px] h-[950px] object-contain grayscale hidden lg:block">
             </div>
             
-            <div class="absolute bottom-75 " data-aos="fade-up" data-aos-duration="1000">
-              <img src = "assets/images/picture.webp" alt="Picture of the Developer" class="h-[400px] w-[595px] object-contain">  
-                <div class="caption">
-                    <h2 class = "font-semibold text-[35px]">Hi! I’m James Mananquil</h2>
+            <div class="lg:absolute bottom-75 mt-50 flex lg:flex-col flex-col-reverse gap-10 lg:gap-0" data-aos="fade-up" data-aos-duration="1000">
+              <img src = "assets/images/picture.webp" alt="Picture of the Developer" class="lg:h-[400px] w-[100%] h-auto lg:w-[595px] object-contain">  
+                <div class="caption mt-5 lg:mt-3">
+                    <h2 class = "font-semibold text-3xl lg:text-[35px]">Hi! I’m James Mananquil</h2>
                     <p class = "text-[18px]">Web Developer | UI/UX Enthusiast</p>
                 </div>
             </div>
 
-            <div class="absolute bottom-80 left-130 flex-col leading-[0.75]" data-aos="fade-down" data-aos-duration="1000">
-                <div class="front-end flex gap-180">
+            <div class="lg:absolute bottom-80 left-130 flex-col leading-[0.75] mt-5 lg:mt-0" data-aos="fade-down" data-aos-duration="1000">
+                <div class="front-end flex justify-between lg:gap-180">
                     <h1>FRONT</h1>
                     <h1>END</h1>
                 </div> 
-                <div class="">
-                    <h1 class ="developer">DEVELOPER</h1>
+                <div class="developer">
+                    <h1 class = "text-[370px]">DEVELOPER</h1>
                 </div>
-                <div class="flex absolute top-100 right-0">
+                <div class="flex lg:absolute top-100 right-0 justify-end mt-8 lg:mt-0">
                     <a routerLink="/projects" class = "view-btn cursor-pointer">
                     View Portfolio <i class="fa-solid fa-arrow-down fa-rotate-by fa-sm" style="--fa-rotate-angle: -45deg;"></i>
                     </a>
@@ -32,11 +32,11 @@
 </section>
 
 <section class="what-i-do ">
-    <div class="what-i-do-container mx-[100px] mb-15">
-        <h1 class = "text-[64px]">What I Do</h1>
+    <div class="what-i-do-container my-10 mx-[20px] lg:mx-[100px] mb-15">
+        <h1 class = "text-4xl lg:text-[64px]" data-aos="fade-up" data-aos-duration="500">What I Do</h1>
 
         <div class="flex flex-col gap-5 mt-7">
-            <div class="flex justify-start gap-15">
+            <div class="flex flex-col gap-10 lg:flex-row lg:justify-start lg:gap-15">
                 <div class="info-container" [class.active]="activeSkill === 'designing'" 
              (click)="toggleSkill('designing')">
                     <h2>Designing</h2>
@@ -56,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="flex justify-end gap-10">
+            <div class="flex flex-col gap-10 lg:flex-row lg:justify-end lg:gap-10">
                 <div class="info-container" [class.active]="activeSkill === 'UI Implementation'" 
              (click)="toggleSkill('UI Implementation')">
                     <h2>UI Implementation</h2>
@@ -79,26 +79,30 @@
     </div>
 </section>
 
-<section class="projects-section mx-[100px] my-20">
-  <h1 class="text-[64px] font-bold mb-10">Projects</h1>
+<section class="projects-section my-10 mx-[20px] lg:mx-[100px] my-10 lg:my-20">
+  <h1 class="text-4xl md:text-5xl lg:text-[64px] font-bold mb-10" data-aos="fade-up" data-aos-duration="500">
+    Projects
+  </h1>
 
-  <div class="projects-wrapper grid grid-cols-3 gap-4 transition-all duration-500" data-aos="fade-up" data-aos-duration="700">
+  <div class="projects-wrapper flex flex-col lg:flex-row gap-8 lg:gap-4 transition-all duration-500" data-aos="fade-up" data-aos-duration="700">
     <div *ngFor="let project of projects" 
          class="project-card relative overflow-hidden cursor-pointer"
          [class.active]="activeProject === project.id"
          (click)="selectProject(project.id)">
       
-      <div class="img-box h-[450px] w-full">
+      <div class="img-box h-[300px] md:h-[400px] lg:h-[450px] w-full">
         <img [src]="project.image" class="w-full h-full object-cover object-top transition-all">
       </div>
 
       <div class="project-info mt-4">
-        <div class="flex justify-between items-center">
-          <h3 class="text-3xl font-semibold">{{ project.title }}</h3>
-          <span class="text-base text-[#AEAEAE] italic">{{ project.type }}</span>
+        <div class="flex justify-between items-center gap-2">
+          <h3 class="text-2xl md:text-3xl font-semibold">{{ project.title }}</h3>
+          <span class="text-sm md:text-base text-[#AEAEAE] italic shrink-0">{{ project.type }}</span>
         </div>
-        <p class="mt-5 text-lg">{{ project.desc }} </p>
-        <a [href]="project.link" target="_blank" class="view-link inline-block items-end mt-4 underline border-black">VIEW PROJECT <i class="fa-solid fa-arrow-down fa-rotate-by" style="color: var(--red-color)"></i></a>
+        <p class="mt-3 lg:mt-5 text-base md:text-lg leading-relaxed">{{ project.desc }}</p>
+        <a [href]="project.link" target="_blank" class="view-link inline-block mt-4 underline border-black">
+          VIEW PROJECT <i class="fa-solid fa-arrow-down fa-rotate-by" style="color: var(--red-color)"></i>
+        </a>
       </div>
     </div>
   </div>

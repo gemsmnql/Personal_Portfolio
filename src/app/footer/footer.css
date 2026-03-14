@@ -53,7 +53,9 @@
 }
 
 .footer-name {
-    
     font-family: "Coolvetica";
 }
 
+.footer-name h1 {
+    font-size: clamp(3rem, 10vw, 12rem);
+}

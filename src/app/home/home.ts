@@ -9,8 +9,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.css',
 })
 export class Home implements AfterViewInit { 
-  activeSkill: string | null = null;
-  activeProject: string | null = null;
+  activeSkill: string | null = "designing";
+  activeProject: string | null = 'arts';
 
   projects = [
     { id: 'campo', title: 'Campo Noble Website', type: 'UI/UX Design', image: 'assets/images/campo-noble.png', desc: 'A modern restaurant website showcasing Campo Noble’s ambiance, menu, and services with an elegant and user-friendly design.', link: "https://www.figma.com/design/hkAXdCKYQZHDzeRv2r3cUE/Group-campo-noble?node-id=9-172&t=I0eZvH1lCjCEdZNs-1" },
