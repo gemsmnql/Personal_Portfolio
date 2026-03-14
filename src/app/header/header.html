@@ -4,17 +4,17 @@
         <a [routerLink]="['/']" class="logotext flex items-center">
             <img src="assets/images/logo/logo.png" alt="Logo" 
                  class="logoheader w-[100px] h-[100px] hover:scale-105 transition hidden lg:block">
-            <img src="assets/images/logo/favlogo.png" alt="Logo" 
+            <img src="assets/images/logo/redblack.png" alt="Logo" 
                  class="w-[70px] h-[70px] hover:scale-105 transition block lg:hidden">
         </a>
 
         <button (click)="toggleMenu()" class="lg:hidden z-50 text-3xl focus:outline-none">
-            <i class="fa-solid" [ngClass]="isMenuOpen ? 'fa-xmark text-white' : 'fa-bars text-white'"></i>
+            <i class="fa-solid" [ngClass]="isMenuOpen ? 'fa-xmark text-white' : 'fa-bars text-red-600'"></i>
         </button>
 
         <ul [class.translate-x-0]="isMenuOpen" 
             [class.translate-x-full]="!isMenuOpen"
-            class="nav-links fixed top-0 right-0 h-screen w-full bg-black/90 text-white flex flex-col items-center justify-center gap-10 text-[24px] transition-transform duration-300 ease-in-out lg:static lg:h-auto lg:w-auto lg:bg-transparent lg:text-black lg:flex-row lg:gap-[50px] lg:text-[20px] lg:translate-x-0">
+            class="nav-links fixed top-0 right-0 h-screen w-full bg-black/90 text-white flex flex-col items-center justify-center gap-10 text-[30px] transition-transform duration-300 ease-in-out lg:static lg:h-auto lg:w-auto lg:bg-transparent lg:text-black lg:flex-row lg:gap-[50px] lg:text-[20px] lg:translate-x-0">
             
             <li><a [routerLink]="['/']" (click)="isMenuOpen = false" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
             <li><a routerLink="/about" (click)="isMenuOpen = false" class="nav-link" routerLinkActive="active">About</a></li>

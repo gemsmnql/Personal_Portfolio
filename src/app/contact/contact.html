@@ -1,41 +1,42 @@
-<section class="contact mx-[100px] mt-30 mb-40">
-    <div class="contact-container flex justify-between items-center">
-        <div class="left flex flex-col gap-7">
-            <div class="got-idea leading-[1]" data-aos="fade-up" data-aos-duration="1000">
-                <h1 class = "text-[150px]">Got an idea?</h1>
-                <h2 class = "text-[35px]">I'll bring it to life</h2>
+<section class="contact mx-6 lg:mx-[100px] mt-20 lg:mt-30 mb-20 lg:mb-40 overflow-hidden">
+    <div class="contact-container flex flex-col lg:flex-row gap-15 lg:justify-between items-center">
+        
+        <div class="left flex flex-col gap-7 w-full lg:w-auto mt-10 lg:mt-0">
+            <div class="got-idea leading-[1] text-center lg:text-left" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-[clamp(60px,15vw,150px)]">Got an idea?</h1>
+                <h2 class="text-[24px] lg:text-[35px]">I'll bring it to life</h2>
             </div>
             
-            <p class = "text-[15px] w-[300px]"  data-aos="fade-up" data-aos-duration="1000">Address: District 15 Block 49 Lot 12 Pandacaqui Mexico Pampanga</p>
+            <p class="text-[15px] w-full lg:max-w-[300px] text-center lg:text-left" data-aos="fade-up" data-aos-duration="1000">
+                Address: District 15 Block 49 Lot 12 Pandacaqui Mexico Pampanga
+            </p>
 
-            <div class="emails" data-aos="fade-up" data-aos-duration="1000">
+            <div class="emails justify-between" data-aos="fade-up" data-aos-duration="1000">
                 <p>email:</p>
-                <h2 class = "text-[35px]">jamescarlmananquil@gmail.com</h2>
-                <p>phone:</p>
-                <h2 class = "text-[32px]">+63 0905 379 1571</h2>
-                
+                <h2 class="text-[20px] sm:text-[28px] lg:text-[35px] break-all">jamescarlmananquil@gmail.com</h2>
+                <p class="lg:mt-4">phone:</p>
+                <h2 class="text-[24px] lg:text-[32px]">+63 0905 379 1571</h2>
             </div>
 
-            <div class="socials underline flex justify-between text-[14px]" data-aos="fade-up" data-aos-duration="1000">
+            <div class="socials underline flex flex-wrap justify-between gap-4 text-[14px]" data-aos="fade-up" data-aos-duration="1000">
                 <a href="https://www.instagram.com/gemsmnql/" target="_blank">INSTAGRAM<i class="fa-solid fa-arrow-down fa-rotate-by ml-1" style="color: var(--red-color)"></i></a>
                 <a href="https://www.tiktok.com/@gemsmnql" target="_blank">TIKTOK<i class="fa-solid fa-arrow-down fa-rotate-by ml-1" style="color: var(--red-color)"></i></a>
                 <a href="https://www.facebook.com/gemsmnql/" target="_blank">FACEBOOK<i class="fa-solid fa-arrow-down fa-rotate-by ml-1" style="color: var(--red-color)"></i></a>
             </div>
         </div>
 
-        <div class="right w-[900px]" data-aos="fade-left" data-aos-duration="1000">
-        <form (submit)="sendEmail($event)" class="right-contain flex flex-col gap-5 w-full text-[20px] p-[50px] rounded-2xl">
-            
-            <input type="text" name="from_name" placeholder="Full Name" class="input-field" required>
-            <input type="number" name="phone_number" placeholder="Phone" class="input-field">
-            <input type="email" name="from_email" placeholder="Email" class="input-field" required>
-            <input type="text" name="message" placeholder="Message" class="input-field" required>
-            
-            <button type="submit" class="submit-btn mt-7 underline text-[32px] text-left">
-                SEND
-                <i class="fa-solid fa-arrow-down fa-rotate-by" style="--fa-rotate-angle: 225deg; color: var(--red-color)"></i>
-            </button>
-        </form>
+        <div class="right w-full lg:w-[50%] xl:w-[900px]" data-aos="fade-left" data-aos-duration="1000">
+            <form (submit)="sendEmail($event)" class="right-contain flex flex-col gap-5 w-full text-[18px] lg:text-[20px] p-6 lg:p-[50px] rounded-2xl">
+                <input type="text" name="from_name" placeholder="Full Name" class="input-field bg-transparent outline-none" required>
+                <input type="number" name="phone_number" placeholder="Phone" class="input-field bg-transparent outline-none">
+                <input type="email" name="from_email" placeholder="Email" class="input-field bg-transparent outline-none" required>
+                <input type="text" name="message" placeholder="Message" class="input-field bg-transparent outline-none" required>
+                
+                <button type="submit" class="submit-btn mt-7 underline text-[28px] lg:text-[32px] text-left cursor-pointer">
+                    SEND
+                    <i class="fa-solid fa-arrow-down fa-rotate-by" style="--fa-rotate-angle: 225deg; color: var(--red-color)"></i>
+                </button>
+            </form>
         </div>
 
     </div>

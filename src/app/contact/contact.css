@@ -1,4 +1,4 @@
-.socials{
+.socials {
     font-family: "Helvetica Neue";
 }
 
@@ -8,24 +8,24 @@
 
 .input-field {
     border-bottom: 2px solid black;
-    padding: 5px;
+    padding: 10px 5px; /* Slightly more padding for easier mobile tapping */
 }
 
 .submit-btn {
     color: var(--red-color);
     font-family: "Helvetica Black";
+    transition: 0.3s;
 }
 
 .submit-btn:hover {
     color: var(--red-hover-color);
-    transition: 0.3s;
 }
 
 .right-contain {
     border: 5px solid var(--red-color);
 }
 
-.got-idea h1{
+.got-idea h1 {
     font-family: "Vanguard";
 }
 
@@ -37,6 +37,7 @@
     font-family: "Helvetica Light";
     color: #7D7B7B;
 }
+
 .emails p {
     font-family: "Helvetica Italic";
     color: var(--red-color);
@@ -48,10 +49,25 @@
 }
 
 .socials i {
+    display: inline-block;
     transition: all 0.2s ease-in-out;
     transform: rotate(225deg);
 }
 
-.socials a:hover i{
+.socials a:hover i {
     transform: translate(3px, -2px) rotate(225deg);
+}
+
+/* Custom adjustment for the fixed width logic */
+@media (max-width: 1024px) {
+    .right-contain {
+        border-width: 3px; /* Slightly thinner border on mobile to save space */
+    }
+}
+
+@media (max-width: 1023px) {
+    .emails {
+        display:flex;
+        align-items:center;
+    }
 }

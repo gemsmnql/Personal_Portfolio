@@ -4,32 +4,6 @@
 
 }
 
-@media (max-width: 640px) { 
-    .hero {
-        height: 100vh;
-        width: 100%;
-        position: relative;
-        /* The first value is the overlay, the second is the image */
-        background-image: linear-gradient(rgba(36, 36, 36, 0.8), rgba(51, 51, 51, 0.8)), 
-                          url(/assets/images/blurry.webp);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    .caption {
-        color:white;
-        text-align: center;
-    }
-
-    .front-end h1{
-        font-size: 30px;
-    }
-
-    .developer h1{
-        font-size: 110px;
-        text-align: center;
-    }
-}
 
 .caption {
     font-family: "Helvetica Neue";
@@ -181,6 +155,61 @@
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+/* --- Tablet Logic (sm: 640px and down) --- */
+@media (min-width: 641px) and (max-width: 1023px) { 
+    .hero {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        /* The first value is the overlay, the second is the image */
+        background-image: linear-gradient(rgba(36, 36, 36, 0.8), rgba(51, 51, 51, 0.8)), 
+                          url(/assets/images/blurry.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .caption {
+        color:white;
+        text-align: center;
+    }
+
+    .front-end h1{
+        font-size: 30px;
+    }
+
+    .developer h1{
+        font-size: 110px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        /* The first value is the overlay, the second is the image */
+        background-image: linear-gradient(rgba(36, 36, 36, 0.8), rgba(51, 51, 51, 0.8)), 
+                          url(/assets/images/blurry.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .caption {
+        color:white;
+        text-align: center;
+    }
+
+    .front-end h1{
+        font-size: 30px;
+    }
+
+    .developer h1{
+        font-size: 110px;
+        text-align: center;
+    }
 }
 
 /* --- Desktop Logic (lg: 1024px and up) --- */

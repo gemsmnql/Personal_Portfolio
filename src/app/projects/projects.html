@@ -1,9 +1,10 @@
-<section class="projects mx-[100px] mt-20 mb-40">
-    <h1 data-aos="fade-up" data-aos-duration="900">Projects</h1>
+<section class="projects mx-[20px] lg:mx-[100px] mt-40 lg:mt-20 mb-40">
+    <h1 data-aos="fade-up" data-aos-duration="900" class = "text-4xl lg:text-6xl">Projects</h1>
 
-    <div *ngFor = "let project of projects" class="project-card flex justify-between items-start py-15 transition-all duration-500 overflow-hidden" [class.pb-20]="activeProjectId === project.id">
-        <div class="cursor-pointer relative transition-all duration-500 ease-in-out overflow-hidden hover:w-[950px] hover:h-[500px]"
-            [ngClass]="activeProjectId === project.id ? 'w-[950px] h-[500px] overflow-y-auto custom-scrollbar' : 'w-[600px] h-[330px]'"
+    <div *ngFor = "let project of projects" class="project-card lg:flex justify-between items-start py-15 transition-all duration-500 overflow-hidden" [class.pb-20]="activeProjectId === project.id">
+
+           <div class="cursor-pointer relative transition-all duration-500 ease-in-out overflow-hidden hover:w-[950px] hover:h-[500px]"
+            [ngClass]="activeProjectId === project.id ? 'h-[300px] md:h-[400px] lg:w-[950px] lg:h-[500px] overflow-y-auto custom-scrollbar' : 'md:h-[400px] lg:w-[600px] h-[300px] lg:h-[330px]'"
             (click)="toggleProject(project.id)">
             
             <img [src]="project.images[project.currentImageIndex]" 
@@ -18,10 +19,11 @@
             </button>
         </div>
 
-        <p class = "number" data-aos="fade-up" data-aos-duration="900">{{ project.number }}</p>
-
-        <div class="project-details flex flex-col gap-5 w-[500px]" data-aos="fade-up" data-aos-duration="900">
-            <h1 class = "font-bold">{{ project.name }}</h1>
+        <p class = "number text-right lg:text-center" data-aos="fade-up" data-aos-duration="900">{{ project.number }}</p> 
+       
+        
+        <div class="project-details flex flex-col gap-5 lg:w-[500px]" data-aos="fade-up" data-aos-duration="900">
+            <h1 class = "font-bold text-center lg:text-left">{{ project.name }}</h1>
             <p class = "desc">{{ project.description }}</p>
             
             <div class="type flex items-center justify-between">
