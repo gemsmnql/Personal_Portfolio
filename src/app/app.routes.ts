@@ -6,7 +6,6 @@ import { Resume } from './resume/resume';
 import { Contact } from './contact/contact';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: Home },
     { path: 'about', component: About},
     { path: 'projects', component: Projects },

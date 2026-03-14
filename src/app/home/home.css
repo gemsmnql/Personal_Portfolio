@@ -1,6 +1,7 @@
 /* Hero Section */
 * {
     scroll-behavior: smooth;
+
 }
 
 @media (max-width: 640px) { 
