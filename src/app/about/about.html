@@ -110,7 +110,7 @@
 
         <div class="main-view-container mt-8 lg:mt-2 flex flex-col items-center">
             <div class="flex justify-center gap-5 items-center w-full max-w-5xl">
-                <h2 class = "parenth">(</h2>
+                <h2 class = "parenth hidden lg:block">(</h2>
                 <div class="large-cert-display w-[100%] h-auto lg:w-[650px] lg:h-[450px]">
                     <img [src]="selectedCert" alt="Featured Certificate" class="w-full h-full object-cover">
                     <div class="cert-view flex gap-10 justify-between items-center mt-3">
@@ -119,7 +119,7 @@
                     </div>  
                     <a [href] ="SelectedCertLink" id="view-cert" target = "_blank">View Certificate</a>       
                 </div>  
-                <h2 class = "parenth">)</h2>  
+                <h2 class = "parenth hidden lg:block">)</h2>  
             </div>
         </div>
     </div>
