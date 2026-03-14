@@ -6,7 +6,8 @@ import { Resume } from './resume/resume';
 import { Contact } from './contact/contact';
 
 export const routes: Routes = [
-    { path: 'home', component: Home },
+    { path: 'home', redirectTo: '', pathMatch: 'full' },
+    { path: '', component: Home },
     { path: 'about', component: About},
     { path: 'projects', component: Projects },
     { path: 'resume', component: Resume },
