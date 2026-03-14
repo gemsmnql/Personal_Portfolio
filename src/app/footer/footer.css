@@ -57,5 +57,5 @@
 }
 
 .footer-name h1 {
-    font-size: clamp(3rem, 10vw, 12rem);
+    font-size: clamp(2.5rem, 10vw, 12rem);
 }
