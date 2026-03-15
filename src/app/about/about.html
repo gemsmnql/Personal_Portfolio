@@ -6,30 +6,30 @@
             </div>
 
             <div class="about-info lg:relative bottom-45 text-right px-0 lg:px-25 flex flex-col gap-8 mt-30 lg:mt-0">
-                <h1 class = "text-5xl lg:text-8xl text-white lg:text-black" data-aos="fade-left" data-aos-duration="800">About</h1>
-                <p data-aos="fade-up" data-aos-duration="900" class = "text-xs md:text-sm lg:text-base text-white lg:text-black">I’m James Mananquil, a front-end web developer who enjoys building clean, responsive, and user-friendly websites. I focus on the UI side, making sure designs are both functional and visually appealing. As a UI/UX enthusiast, I pay close attention to how users interact with a website and how to make their experience smoother and more engaging. I’m also passionate about the arts, especially graphic design and painting, which influence my creative approach to web development and design.</p>
+                <h1 class = "text-5xl md:text-7xl lg:text-8xl text-white lg:text-black" data-aos="fade-left" data-aos-duration="800">About</h1>
+                <p data-aos="fade-up" data-aos-duration="900" class = "text-xs md:text-base text-white lg:text-black">I’m James Mananquil, a front-end web developer who enjoys building clean, responsive, and user-friendly websites. I focus on the UI side, making sure designs are both functional and visually appealing. As a UI/UX enthusiast, I pay close attention to how users interact with a website and how to make their experience smoother and more engaging. I’m also passionate about the arts, especially graphic design and painting, which influence my creative approach to web development and design.</p>
 
                 <div class="grid grid-cols-2 text-left text-white lg:text-black" data-aos="fade-up" data-aos-duration="900">
                     <div class="info">
-                        <h1 class="text-3xl lg:text-6xl">3 +</h1>
-                        <p>Years in Designing</p>
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl">3 +</h1>
+                        <p class = "text-base lg:text-[20px]">Years in Designing</p>
                     </div>
                     <div class="info">
-                        <h1 class="text-3xl lg:text-6xl">4 +</h1>
-                        <p>Completed Projects</p>
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl">4 +</h1>
+                        <p class = "text-base md:text-[20px]">Completed Projects</p>
                     </div>
                     <div class="info">
-                        <h1 class="text-3xl lg:text-6xl">2   + </h1>
-                        <p>Years in Web Dev</p>
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl">2   + </h1>
+                        <p class = "text-base md:text-[20px]">Years in Web Dev</p>
                     </div>
                     <div class="info">
-                        <h1 class="text-3xl lg:text-6xl">100 %</h1>
-                        <p>Client Satisfaction</p>
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl">100 %</h1>
+                        <p class = "text-base md:text-[20px]">Client Satisfaction</p>
                     </div>
                 </div>
             </div>
 
-            <div class="about-name text-[clamp(60px,15vw,210px)] flex flex-col lg:absolute lg:bottom-10 right-50 text-[var(--red-color)]" data-aos="fade-down-left" data-aos-duration="800">
+            <div class="about-name text-[clamp(80px,20vw,210px)] mt-5 lg:mt-0 flex flex-col lg:absolute lg:bottom-10 right-50 text-[var(--red-color)]" data-aos="fade-down-left" data-aos-duration="800">
                 <h1><span>Ja</span>mes</h1>
                 <h1><span>Ma</span>nanquil</h1>
             </div>
@@ -114,10 +114,10 @@
                 <div class="large-cert-display w-[100%] h-auto lg:w-[650px] lg:h-[450px]">
                     <img [src]="selectedCert" alt="Featured Certificate" class="w-full h-full object-cover">
                     <div class="cert-view flex gap-10 justify-between items-center mt-3">
-                        <h2 class = "text-base lg:text-2xl">{{ SelectedCertTitle }}</h2>
+                        <h2 class = "text-base md:text-2xl">{{ SelectedCertTitle }}</h2>
                             <p class = "text-[#AEAEAE] text-right">Issued on {{ SelectedCertDate | date:'shortDate' }}</p>          
                     </div>  
-                    <a [href] ="SelectedCertLink" id="view-cert" target = "_blank">View Certificate</a>       
+                    <a [href] ="SelectedCertLink" id="view-cert" class = "text-xs md:text-sm" target = "_blank">View Certificate</a>       
                 </div>  
                 <h2 class = "parenth hidden lg:block">)</h2>  
             </div>

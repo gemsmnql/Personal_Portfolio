@@ -24,7 +24,6 @@
 
 .about-info .info p {
     font-family: "Coolvetica";
-    font-size: 16px;
 }
 
 /* Technical Skills*/
@@ -136,7 +135,6 @@
 
 #view-cert {
     font-family: "Helvetica Neue", sans-serif;
-    font-size: 12px;
     margin-top: 20px;
     text-transform: uppercase;
 }
@@ -189,6 +187,10 @@
         font-size: 5rem;
     }
 
+    .about-info .info {
+        padding: 15px;
+    }
+
 }
 
 @media (min-width: 641px) and (max-width: 1023px) {
@@ -216,5 +218,9 @@
     filter: grayscale(90%);
     
     z-index: -1; 
+
+    .about-info .info {
+        padding: 30px;
+    }
 }
 }
