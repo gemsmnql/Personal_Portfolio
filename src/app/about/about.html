@@ -1,6 +1,6 @@
 <section class="about">
     <div class="about-container mt-0 lg:mt-20">
-        <div class="grid grid-cols-1 lg:grid-cols-2 mx-[20px] lg:mx-0 gap-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 mx-[20px] lg:mx-0 lg:gap-10">
             <div class="relative bottom-53" data-aos="fade-right" data-aos-duration="700">
                 <img src = "assets/images/aboutpic.webp" class="w-[1000px] h-[900px] object-[0%_25%] grayscale object-cover hidden lg:block" alt="Blurry Picture of the Developer">
             </div>
@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="about-name text-[120px] lg:text-[210px] flex flex-col lg:absolute bottom-10 right-50 text-[var(--red-color)]" data-aos="fade-down-left" data-aos-duration="800">
+            <div class="about-name text-[clamp(60px,15vw,210px)] flex flex-col lg:absolute lg:bottom-10 right-50 text-[var(--red-color)]" data-aos="fade-down-left" data-aos-duration="800">
                 <h1><span>Ja</span>mes</h1>
                 <h1><span>Ma</span>nanquil</h1>
             </div>
@@ -66,7 +66,7 @@
 </section>
 
 <section class="cert my-50" data-aos="fade-up" data-aos-duration="900">
-    <div class="cert-container mx-10">
+    <div class="cert-container mx-[20px] lg:mx-10">
         <h1 class=" text-4xl lg:text-6xl font-bold mb-10 text-center">Certifications</h1>
 
         <div class="flex gap-10 lg:gap-40 overflow-x-auto pb-10 scrollbar-hide scroll-smooth flex-nowrap snap-x snap-mandatory" (wheel)="$any($event).preventDefault(); scrollContainer.scrollLeft += ($event.deltaY * 2.5)" #scrollContainer>
@@ -140,14 +140,14 @@
         </div>
     </div>
    
-    <div #slider class="flex overflow-x-auto gap-20 scroll-smooth scrollbar-hide mx-10">
-        <div *ngFor="let fb of feedbacks" class="flex-shrink-0"> <div class="feedback-card items-center flex flex-col lg:flex-row gap-20 relative">
+    <div #slider class="flex overflow-x-auto gap-20 scroll-smooth scrollbar-hide mx-10 snap-x snap-mandatory">
+        <div *ngFor="let fb of feedbacks" class="flex-shrink-0 snap-center"> <div class="feedback-card items-center flex flex-col lg:flex-row gap-20 gap-10 lg:gap-20 relative w-[85vw] lg:w-auto">
                 <div class="image-part py-10 relative flex-shrink-0">
                     <img [src]="fb.image" alt="Feedback" class="w-[460px] h-[480px] object-cover">
                     <h1 class="absolute top-2 -right-10 text-[250px] leading-none text-[red] rotate-180 select-none">,,</h1>
                 </div>
         
-                <div class="comment flex flex-col gap-10 max-w-[400px]">
+                <div class="comment flex flex-col gap-10 lg:max-w-[400px]">
                     <p class="text-justify text-base leading-relaxed">{{ fb.comment }}</p>
                     <div class="name">
                         <h2 class="text-2xl font-bold">{{ fb.name }}</h2>

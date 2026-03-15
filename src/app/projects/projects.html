@@ -4,7 +4,7 @@
     <div *ngFor = "let project of projects" class="project-card lg:flex justify-between items-start py-15 transition-all duration-500 overflow-hidden" [class.pb-20]="activeProjectId === project.id">
 
            <div class="cursor-pointer relative transition-all duration-500 ease-in-out overflow-hidden hover:w-[950px] hover:h-[500px]"
-            [ngClass]="activeProjectId === project.id ? 'h-[300px] md:h-[400px] lg:w-[950px] lg:h-[500px] overflow-y-auto custom-scrollbar' : 'md:h-[400px] lg:w-[600px] h-[300px] lg:h-[330px]'"
+            [ngClass]="activeProjectId === project.id ? 'h-[300px] w-full md:h-[400px] lg:w-[950px] lg:h-[500px] overflow-y-auto custom-scrollbar' : 'md:h-[400px] w-full lg:w-[600px] h-[300px] lg:h-[330px]'"
             (click)="toggleProject(project.id)">
             
             <img [src]="project.images[project.currentImageIndex]" 
@@ -23,11 +23,11 @@
        
         
         <div class="project-details flex flex-col gap-5 lg:w-[500px]" data-aos="fade-up" data-aos-duration="900">
-            <h1 class = "font-bold text-center lg:text-left">{{ project.name }}</h1>
-            <p class = "desc">{{ project.description }}</p>
+            <h1 class = "text-4xl md:text-[3rem] font-bold text-center lg:text-left">{{ project.name }}</h1>
+            <p class = "desc text-sm md:text-base">{{ project.description }}</p>
             
             <div class="type flex items-center justify-between">
-                <p class = "type text-[#AEAEAE]">{{ project.type }}</p>
+                <p class = "type text-sm md:text-base text-[#AEAEAE]">{{ project.type }}</p>
                 <a [href]="project.link" target= "_blank" class="view-link inline-block underline border-black font-bold">VIEW PROJECT<i class="fa-solid fa-arrow-down fa-rotate-by" style="color: var(--red-color)"></i></a>
             </div>
         </div>

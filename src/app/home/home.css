@@ -178,11 +178,6 @@
     .front-end h1{
         font-size: 30px;
     }
-
-    .developer h1{
-        font-size: 110px;
-        text-align: center;
-    }
 }
 
 @media (max-width: 640px) {
