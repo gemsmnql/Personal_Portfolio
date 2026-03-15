@@ -61,37 +61,37 @@
             
             <div class="cert-card min-w-[280px] lg:min-w-[350px] flex-shrink-0" (click)="selectedCert = 'assets/images/cert1.JPG'; SelectedCertTitle = 'freeCodeCamp Responsive Web Design Certification'; SelectedCertDate = 'September 7, 2024'; SelectedCertLink = 'https://www.freecodecamp.org/certification/jamesmananquil/responsive-web-design'">
                 <span class="text-sm block mb-2">(01)</span>
-                <img src="assets/images/cert1.JPG" alt="Certification 1" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
+                <img src="assets/images/cert1.JPG" alt="freeCodeCamp Responsive Web Design Certificate" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
                 <h2>freeCodeCamp Responsive Web Design</h2>
             </div>
 
             <div class="cert-card min-w-[280px] lg:min-w-[350px] flex-shrink-0" (click)="selectedCert = 'assets/images/cert2.png'; SelectedCertTitle = 'Simplilearn Introduction to Figma' ; SelectedCertDate = 'September 24, 2024'; SelectedCertLink = 'https://simpli-web.app.link/e/Waoj0kwg10b'">
                 <span class="text-sm block mb-2">(02)</span>
-                <img src="assets/images/cert2.png" alt="simplilearn Introduction to Figma" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
+                <img src="assets/images/cert2.png" alt="simplilearn Introduction to Figma Certificate" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
                 <h2>Simplilearn Introduction to Figma</h2>
             </div>
 
             <div class="cert-card min-w-[280px] lg:min-w-[350px] flex-shrink-0" (click)="selectedCert = 'assets/images/cert3.png'; SelectedCertTitle = 'CompTIA ITF+ Certified'; SelectedCertDate = 'November 23, 2023'; SelectedCertLink = 'assets/images/comptia.pdf'">
                 <span class="text-sm mb-2">(03)</span>
-                <img src="assets/images/cert3.png" alt="Certification 3" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
+                <img src="assets/images/cert3.png" alt="CompTIA ITF+ Certified Certificate" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
                 <h2>CompTIA ITF+ Certified</h2>
             </div>
 
             <div class="cert-card min-w-[280px] lg:min-w-[350px] flex-shrink-0" (click)="selectedCert = 'assets/images/cert4.png'; SelectedCertTitle = 'SimpliLearn Basics of UI/UX'; SelectedCertDate = 'August 27, 2025'; SelectedCertLink = 'assets/images/basicuix.pdf'">
                 <span class="text-sm mb-2">(04)</span>
-                <img src="assets/images/cert4.png" alt="Certification 4" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
+                <img src="assets/images/cert4.png" alt="SimpliLearn Basics of UI/UX Certificate" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
                 <h2>SimpliLearn Basics of UI/UX</h2>
             </div>
 
             <div class="cert-card min-w-[280px] lg:min-w-[350px] flex-shrink-0" (click)="selectedCert = 'assets/images/cert5.png'; SelectedCertTitle = 'SimpliLearn Website UI/UX Using ChatGPT'; SelectedCertDate = 'August 27, 2025'; SelectedCertLink = 'assets/images/chatgpt.pdf'">
                 <span class="text-sm mb-2">(05)</span>
-                <img src="assets/images/cert5.png" alt="Certification 5" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
+                <img src="assets/images/cert5.png" alt="SimpliLearn Website UI/UX Using ChatGPT Certificate" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
                 <h2>SimpliLearn Website UI/UX Using ChatGPT</h2>
             </div>
 
             <div class="cert-card min-w-[280px] lg:min-w-[350px] flex-shrink-0" (click)="selectedCert = 'assets/images/cert6.png'; SelectedCertTitle = 'Cisco JavaScript Essentials 1'; SelectedCertDate = 'October 25, 2024'; SelectedCertLink = 'assets/images/js.pdf'">
                 <span class="text-sm mb-2">(06)</span>
-                <img src="assets/images/cert6.png" alt="Certification 6" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
+                <img src="assets/images/cert6.png" alt="Cisco JavaScript Essentials 1 Certificate" class="w-full h-[200px] lg:h-[240px] object-cover bg-gray-200">
                 <h2>Cisco JavaScript Essentials 1</h2>
             </div>
         </div>
@@ -131,7 +131,7 @@
     <div #slider class="flex overflow-x-auto gap-20 scroll-smooth scrollbar-hide mx-5 snap-x snap-mandatory">
         <div *ngFor="let fb of feedbacks" class="flex-shrink-0 snap-center"> <div class="feedback-card items-center flex flex-col lg:flex-row gap-20 gap-10 lg:gap-20 relative w-[85vw] lg:w-auto">
                 <div class="image-part py-10 relative flex-shrink-0">
-                    <img [src]="fb.image" alt="Feedback" class="w-[460px] h-[480px] object-cover">
+                    <img [src]="fb.image" [alt]="fb.alt" class="w-[460px] h-[480px] object-cover">
                     <h1 class="absolute top-2 -right-10 text-[250px] leading-none text-[red] rotate-180 select-none">,,</h1>
                 </div>
         

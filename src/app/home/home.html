@@ -91,7 +91,7 @@
          (click)="selectProject(project.id)">
       
       <div class="img-box h-[300px] md:h-[400px] lg:h-[450px] w-full">
-        <img [src]="project.image" class="w-full h-full object-cover object-top transition-all">
+        <img [src]="project.image" [alt]= "project.alt" class="w-full h-full object-cover object-top transition-all">
       </div>
 
       <div class="project-info mt-4">

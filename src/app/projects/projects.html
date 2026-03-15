@@ -8,7 +8,7 @@
             (click)="toggleProject(project.id)">
             
             <img [src]="project.images[project.currentImageIndex]" 
-                alt="Project Image" 
+                [alt]="project.alt"
                 class="project-image object-top w-full object-cover transition-all duration-500 ease-in-out" 
                 [ngClass]="activeProjectId === project.id ? 'scale-100' : 'h-[500px]'" data-aos="fade-right" data-aos-duration="900">
 
