@@ -115,7 +115,7 @@
                     <img [src]="selectedCert" alt="Featured Certificate" class="w-full h-full object-cover">
                     <div class="cert-view flex gap-10 justify-between items-center mt-3">
                         <h2 class = "text-base md:text-2xl">{{ SelectedCertTitle }}</h2>
-                            <p class = "text-[#AEAEAE] text-right">Issued on {{ SelectedCertDate | date:'shortDate' }}</p>          
+                            <p class = "text-xs md:text-base text-[#AEAEAE] text-right">Issued on {{ SelectedCertDate | date:'shortDate' }}</p>          
                     </div>  
                     <a [href] ="SelectedCertLink" id="view-cert" class = "text-xs md:text-sm" target = "_blank">View Certificate</a>       
                 </div>  
@@ -140,7 +140,7 @@
         </div>
     </div>
    
-    <div #slider class="flex overflow-x-auto gap-20 scroll-smooth scrollbar-hide mx-10 snap-x snap-mandatory">
+    <div #slider class="flex overflow-x-auto gap-20 scroll-smooth scrollbar-hide mx-5 snap-x snap-mandatory">
         <div *ngFor="let fb of feedbacks" class="flex-shrink-0 snap-center"> <div class="feedback-card items-center flex flex-col lg:flex-row gap-20 gap-10 lg:gap-20 relative w-[85vw] lg:w-auto">
                 <div class="image-part py-10 relative flex-shrink-0">
                     <img [src]="fb.image" alt="Feedback" class="w-[460px] h-[480px] object-cover">
