@@ -33,9 +33,8 @@
     }
 
     .nav-bar.scrolled {
-        background-color: rgba(121, 121, 121, 0.1);
         backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(20px);
     }
 
 }
