@@ -27,7 +27,6 @@
 
 .view-btn{
     color: var(--yellow-color);
-    font-size: 20px;
     justify-content: end;
     font-family: "Coolvetica";
     transition: var(--transition)
