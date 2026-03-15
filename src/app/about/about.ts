@@ -1,10 +1,11 @@
 import { CommonModule, DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CountUpDirective } from 'ngx-countup';
 
 @Component({
   selector: 'app-about',
-  imports: [RouterLink, DatePipe, CommonModule],
+  imports: [RouterLink, DatePipe, CommonModule, CountUpDirective],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
@@ -19,6 +20,19 @@ export class About {
     {comment: 'Working with James is always smooth because he understands both design and functionality. His front-end code is well-structured, responsive, and easy to maintain. He brings concepts to life with precision and creativity.', name: "Kevin Galang", position: "Full Stack Developer", image: "assets/images/kevin.jpg"},
     {comment: 'James has a strong eye for layout, spacing, and responsiveness. He knows how to turn ideas into engaging web interfaces while keeping performance and usability in mind. His balance of creativity and technical skill makes him a valuable teammate.', name: "Justin Cabe", position: "Fron End Developer", image: "assets/images/cabe.jpg"},
   ]
+
+  skills = [
+    { name: 'HTML', level: 80 },
+    { name: 'CSS', level: 70 },
+    { name: 'JavaScript', level: 50 },
+    { name: 'Figma', level: 90 },
+  ];
+
+  countUpOptions = {
+    enableScrollSpy: true,
+    scrollSpyOnce: true,
+    duration: 2.5
+  };
 
   scroll(direction: 'left' | 'right', element: HTMLElement) {
     const scrollAmount = element.offsetWidth / 1.5; 

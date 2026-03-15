@@ -37,29 +37,17 @@
     </div>
 </section>
 
-<section class="skills" data-aos="fade-up" data-aos-duration="900" >
+<section class="skills" data-aos="fade-up" data-aos-duration="900">
     <div class="skills-container mx-[20px] lg:mx-[100px] my-20 justify-center">
         <h1 class="text-4xl lg:text-6xl font-bold mb-10">Technical Skills</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div class="skill-card" style="--progress: 80%;">
-                <span class="percentage">80<span class = "text-2xl">%</span></span>
-                <h2 class = "text-2xl">HTML</h2>
-            </div>
-            
-            <div class="skill-card" style="--progress: 70%;">
-                <span class="percentage">70<span class = "text-2xl">%</span></span>
-                <h2 class = "text-2xl">CSS</h2>
-            </div>
-
-            <div class="skill-card" style="--progress: 50%;">
-                <span class="percentage">50<span class = "text-2xl">%</span></span>
-                <h2 class = "text-2xl">JavaScript</h2>
-            </div>
-
-            <div class="skill-card" style="--progress: 90%;">
-                <span class="percentage">90<span class = "text-2xl">%</span></span>
-                <h2 class = "text-2xl">Figma</h2>
+            <div *ngFor="let skill of skills" class="skill-card" [style.--progress]="skill.level + '%'">
+                <span class="percentage">
+                    <span [countUp]="skill.level" [countUpOptions]="countUpOptions">0</span>
+                    <span class="text-2xl">%</span>
+                </span>
+                <h2 class="text-2xl">{{ skill.name }}</h2>
             </div>
         </div>
     </div>
