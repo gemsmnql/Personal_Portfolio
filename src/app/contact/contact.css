@@ -17,8 +17,8 @@
     transition: 0.3s;
 }
 
-.submit-btn:hover {
-    color: var(--red-hover-color);
+.submit-btn:hover{
+    transform: translate(7px, -7px);
 }
 
 .right-contain {

@@ -169,3 +169,9 @@ li::marker {
     font-family: "Integral";
     font-size: 150px;
 }
+
+@media (max-width: 640px) {
+    .name h2 {
+        font-size: 15px;
+    }
+}
