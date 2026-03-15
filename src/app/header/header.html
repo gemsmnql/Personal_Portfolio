@@ -1,10 +1,10 @@
-<div class="nav-bar fixed top-0 w-full z-[100] lg:sticky transition-all duration-300">
-    <nav class="nav-container justify-between flex lg:justify-start lg:gap-[50px] px-[20px] mt-[20px] lg:mt-[60px] lg:px-[100px] items-center z-10 bg-transparent">
+<div class="nav-bar fixed top-0 w-full z-[100] lg:sticky transition-all duration-300 ease-in-out" [class.scrolled]="isScrolled">
+    <nav class="nav-container justify-between items-center flex lg:justify-start lg:gap-[50px] mx-[20px] py-[10px] lg:mt-[60px] lg:px-[100px] z-10">
         
         <a [routerLink]="['/']" class="logotext flex items-center">
             <img src="assets/images/logo/logo.png" alt="Logo" 
                  class="logoheader w-[100px] h-[100px] hover:scale-105 transition hidden lg:block">
-            <img src="assets/images/logo/redblack.png" alt="Logo" 
+            <img src="assets/images/logo/favlogo.png" alt="Logo" 
                  class="w-[70px] h-[70px] hover:scale-105 transition block lg:hidden">
         </a>
 

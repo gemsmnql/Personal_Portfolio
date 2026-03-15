@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -10,6 +10,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class Header {
   isMenuOpen = false;
+  isScrolled = false
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // If the vertical scroll is more than 10px, set isScrolled to true
+    this.isScrolled = window.scrollY > 10;
+  }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

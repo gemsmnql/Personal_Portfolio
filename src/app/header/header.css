@@ -24,3 +24,17 @@
 .time {
     font-family: "Helvetica Neue";
 }
+
+@media (max-width: 1023px) {
+    .nav-bar {
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+    }
+
+    .nav-bar.scrolled {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(30px);
+    }
+
+}
