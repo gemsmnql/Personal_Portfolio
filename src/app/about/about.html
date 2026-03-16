@@ -42,7 +42,7 @@
         <h1 class="text-4xl lg:text-6xl font-bold mb-10">Technical Skills</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div *ngFor="let skill of skills" class="skill-card" [style.--progress]="skill.level + '%'">
+            <div *ngFor="let skill of skills" class="skill-card cursor-pointer" [style.--progress]="skill.level + '%'" [class.active]="skill.isActive" (click)="toggleSkill(skill)">
                 <span class="percentage">
                     <span [countUp]="skill.level" [countUpOptions]="countUpOptions">0</span>
                     <span class="text-2xl">%</span>

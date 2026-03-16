@@ -51,7 +51,8 @@
     transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
-.skill-card:hover::before {
+.skill-card:hover::before,
+.skill-card.active::before {
     height: var(--progress);
 }
 

@@ -22,10 +22,10 @@ export class About {
   ]
 
   skills = [
-    { name: 'HTML', level: 80 },
-    { name: 'CSS', level: 70 },
-    { name: 'JavaScript', level: 50 },
-    { name: 'Figma', level: 90 },
+    { name: 'HTML', level: 80, isActive: false },
+    { name: 'CSS', level: 70, isActive: false },
+    { name: 'JavaScript', level: 50, isActive: false },
+    { name: 'Figma', level: 90, isActive: false },
   ];
 
   countUpOptions = {
@@ -42,5 +42,16 @@ export class About {
     } else {
       element.scrollLeft += scrollAmount;
     }
+  }
+
+  // Inside your component class
+  toggleSkill(selectedSkill: any) {
+    // Optional: Close other skills first (Accordion style)
+    this.skills.forEach(s => {
+      if (s !== selectedSkill) s.isActive = false;
+    });
+
+    // Toggle the clicked skill
+    selectedSkill.isActive = !selectedSkill.isActive;
   }
 }
