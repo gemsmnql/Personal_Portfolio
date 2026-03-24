@@ -1,31 +1,37 @@
 <section class="hero">
-    <div class="hero-container flex mx-[20px] lg:mx-[100px] ">
+    <div class="hero-container flex mx-[20px] lg:ml-[100px] lg:mr-[70px]">
         <div class="picture w-full lg:relative">
-            <div class="flex justfify-end lg:relative left-106 bottom-38" data-aos="fade-left" data-aos-duration="1000">
-                <img src = "assets/images/blurry.webp" alt="Blurry Picture of the Developer" class="w-[1380px] h-[950px] object-contain grayscale hidden lg:block">
+            <div class="flex justfify-end lg:relative lg:left-106 bottom-36" data-aos="fade-left" data-aos-duration="1000">
+                <img src = "assets/images/blurry.webp" alt="Blurry Picture of the Developer" class="h-[930px] object-fill grayscale hidden lg:block">
             </div>
             
-            <div class="lg:absolute bottom-75 mt-30 flex lg:flex-col flex-col-reverse gap-15 lg:gap-0" data-aos="fade-up" data-aos-duration="1000">
-              <img src = "assets/images/picture.webp" alt="Picture of the Developer" class="lg:h-[400px] w-[100%] h-auto lg:w-[595px] object-contain">  
-                <div class="caption mt-5 lg:mt-3">
-                    <h2 class = "font-semibold text-3xl lg:text-[35px]">Hi! I’m James Mananquil</h2>
-                    <p class = "text-[18px]">Web Developer | UI/UX Enthusiast</p>
+            <div class="lg:flex justify-between lg:absolute top-0 mt-8 w-full">
+                
+                <div class="mt-30 flex lg:flex-col  flex-col-reverse gap-15 lg:gap-0" data-aos="fade-up" data-aos-duration="1000">
+                <img src = "assets/images/picture.webp" alt="Picture of the Developer" class="w-full 
+            lg:max-w-[520px] 2xl:max-w-[595px]
+            h-auto object-cover">  
+                    <div class="caption mt-5 lg:mt-3">
+                        <h2 class = "font-semibold text-xl sm:text-2xl lg:text-[25px] 2xl:text-[35px]">Hi! I’m James Mananquil</h2>
+                        <p class = "text-sm sm:text-base lg:text-base 2xl:text-lg">Web Developer | UI/UX Enthusiast</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="lg:absolute bottom-80 left-130 flex-col leading-[0.75] mt-5 lg:mt-0" data-aos="fade-down" data-aos-duration="1000">
-                <div class="front-end flex justify-between lg:gap-180">
-                    <h1>FRONT</h1>
-                    <h1>END</h1>
-                </div> 
-                <div class="developer w-full text-center">
-                    <h1 class = "sm:text-[120px] md:text-[28vw] lg:text-[370px]">DEVELOPER</h1>
+                <div class="caption-2 flex flex-col leading-[0.75] mt-5 lg:mt-10 xl:mt-0 lg:absolute right-0 bottom-0" data-aos="fade-down" data-aos-duration="1000">
+                    <div class="front-end flex justify-between text-lg sm:text-2xl md:text-3xl xl:text-[80px] leading-[0.75]">
+                        <h1>FRONT</h1>
+                        <h1>END</h1>
+                    </div> 
+                    <div class="developer w-full text-center">
+                        <h1 class = "text-[60px] sm:text-[90px] md:text-[140px] lg:text-[200px] xl:text-[300px] 2xl:text-[370px]">DEVELOPER</h1>
+                    </div>
+                    <div class="flex 2xl:absolute top-90 right-0 justify-end mt-6 ">
+                        <a routerLink="/projects" class = "view-btn cursor-pointer text-base md:text-xl">
+                        View Portfolio <i class="fa-solid fa-arrow-down fa-rotate-by fa-sm" style="--fa-rotate-angle: -45deg;"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="flex lg:absolute top-97 right-0 justify-end mt-6 lg:mt-0">
-                    <a routerLink="/projects" class = "view-btn cursor-pointer text-base md:text-xl">
-                    View Portfolio <i class="fa-solid fa-arrow-down fa-rotate-by fa-sm" style="--fa-rotate-angle: -45deg;"></i>
-                    </a>
-                </div>
+
             </div>
         </div>
     </div>
