@@ -1,34 +1,49 @@
 <section class="projects mx-[20px] lg:mx-[100px] mt-40 lg:mt-20 mb-40">
-    <h1 data-aos="fade-up" data-aos-duration="900" class = "text-4xl lg:text-6xl">Projects</h1>
+    <h1 data-aos="fade-up" data-aos-duration="900" class="text-4xl lg:text-6xl">Projects</h1>
 
-    <div *ngFor = "let project of projects" class="project-card lg:flex justify-between items-start py-15 transition-all duration-500 overflow-hidden" [class.pb-20]="activeProjectId === project.id">
+    <div *ngFor="let project of projects" class="project-card lg:flex justify-between items-start py-15 transition-all duration-500 overflow-hidden" [class.pb-20]="activeProjectId === project.id">
 
-           <div class="cursor-pointer relative transition-all duration-500 ease-in-out overflow-hidden hover:w-[950px] hover:h-[500px]"
+        <div class="cursor-pointer relative transition-all duration-500 ease-in-out overflow-hidden hover:w-[950px] hover:h-[500px]"
             [ngClass]="activeProjectId === project.id ? 'h-[300px] md:h-[400px] lg:w-[950px] lg:h-[500px] overflow-y-auto custom-scrollbar' : 'md:h-[400px] lg:w-[600px] h-[300px] lg:h-[330px]'"
-            (click)="toggleProject(project.id)">
-            
-            <img [src]="project.images[project.currentImageIndex]" 
+            (click)="toggleProject(project.id)"
+            (mouseenter)="onCardHover(project, true)"
+            (mouseleave)="onCardHover(project, false)">
+
+            <!-- Video preview -->
+            <video *ngIf="project.video"
+                #videoRef
+                [src]="project.video"
+                class="project-video object-top w-full h-full object-cover transition-all duration-500 ease-in-out"
+                [ngClass]="activeProjectId === project.id ? 'scale-100' : 'h-[500px]'"
+                muted
+                loop
+                playsinline
+                data-aos="fade-right" data-aos-duration="900">
+            </video>
+
+            <!-- Image fallback -->
+            <img *ngIf="!project.video && project.images"
+                [src]="project.images[project.currentImageIndex]"
                 [alt]="project.alt"
-                class="project-image object-top w-full object-cover transition-all duration-500 ease-in-out" 
+                class="project-image object-top w-full object-cover transition-all duration-500 ease-in-out"
                 [ngClass]="activeProjectId === project.id ? 'scale-100' : 'h-[500px]'" data-aos="fade-right" data-aos-duration="900">
 
-            <button *ngIf="activeProjectId === project.id && project.images.length > 1"
+            <button *ngIf="activeProjectId === project.id && !project.video && project.images && project.images.length > 1"
                     (click)="nextImage($event, project)"
                     class="absolute right-5 top-1/2 -translate-y-1/2 bg-white border-2 border-[var(--red-color)] p-4 rounded-full shadow-lg transition-all hover:bg-[var(--red-color)] group">
                 <i class="fa-solid fa-chevron-right text-black"></i>
             </button>
         </div>
 
-        <p class = "number text-right lg:text-center" data-aos="fade-up" data-aos-duration="900">{{ project.number }}</p> 
-       
-        
+        <p class="number text-right lg:text-center" data-aos="fade-up" data-aos-duration="900">{{ project.number }}</p> 
+
         <div class="project-details flex flex-col gap-5 lg:w-[500px]" data-aos="fade-up" data-aos-duration="900">
-            <h1 class = "text-4xl md:text-[3rem] font-bold text-center lg:text-left">{{ project.name }}</h1>
-            <p class = "desc text-sm md:text-base">{{ project.description }}</p>
-            
+            <h1 class="text-4xl md:text-[3rem] font-bold text-center lg:text-left">{{ project.name }}</h1>
+            <p class="desc text-sm md:text-base">{{ project.description }}</p>
+
             <div class="type flex items-center justify-between">
-                <p class = "type text-sm md:text-base text-[#AEAEAE]">{{ project.type }}</p>
-                <a [href]="project.link" target= "_blank" class="view-link inline-block underline border-black font-bold text-xs md:text-base ">VIEW PROJECT<i class="fa-solid fa-arrow-down fa-rotate-by" style="color: var(--red-color)"></i></a>
+                <p class="type text-sm md:text-base text-[#AEAEAE]">{{ project.type }}</p>
+                <a [href]="project.link" target="_blank" class="view-link inline-block underline border-black font-bold text-xs md:text-base">VIEW PROJECT<i class="fa-solid fa-arrow-down fa-rotate-by" style="color: var(--red-color)"></i></a>
             </div>
         </div>
     </div>
