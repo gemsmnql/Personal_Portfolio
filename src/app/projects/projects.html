@@ -3,8 +3,10 @@
 
     <div *ngFor="let project of projects" class="project-card lg:flex justify-between items-start py-15 transition-all duration-500 overflow-hidden" [class.pb-20]="activeProjectId === project.id">
 
-        <div class="cursor-pointer relative transition-all duration-500 ease-in-out overflow-hidden hover:w-[950px] hover:h-[500px]"
-            [ngClass]="activeProjectId === project.id ? 'h-[300px] md:h-[400px] lg:w-[950px] lg:h-[500px] overflow-y-auto custom-scrollbar' : 'md:h-[400px] lg:w-[600px] h-[300px] lg:h-[330px]'"
+        <div class="cursor-pointer relative w-full transition-all duration-500 ease-in-out lg:hover:w-[950px]"
+            [ngClass]="activeProjectId === project.id
+                ? 'lg:w-[950px] max-h-[400px] lg:max-h-[500px] overflow-y-auto custom-scrollbar'
+                : 'lg:w-[600px] aspect-video overflow-hidden'"
             (click)="toggleProject(project.id)"
             (mouseenter)="onCardHover(project, true)"
             (mouseleave)="onCardHover(project, false)">
@@ -13,8 +15,8 @@
             <video *ngIf="project.video"
                 #videoRef
                 [src]="project.video"
-                class="project-video object-top w-full h-full object-cover transition-all duration-500 ease-in-out"
-                [ngClass]="activeProjectId === project.id ? 'scale-100' : 'h-[500px]'"
+                class="project-video block w-full"
+                [ngClass]="activeProjectId === project.id ? 'h-auto' : 'h-full object-cover object-top'"
                 muted
                 loop
                 playsinline
@@ -25,8 +27,9 @@
             <img *ngIf="!project.video && project.images"
                 [src]="project.images[project.currentImageIndex]"
                 [alt]="project.alt"
-                class="project-image object-top w-full object-cover transition-all duration-500 ease-in-out"
-                [ngClass]="activeProjectId === project.id ? 'scale-100' : 'h-[500px]'" data-aos="fade-right" data-aos-duration="900">
+                class="project-image block w-full"
+                [ngClass]="activeProjectId === project.id ? 'h-auto' : 'h-full object-cover object-top'"
+                data-aos="fade-right" data-aos-duration="900">
 
             <button *ngIf="activeProjectId === project.id && !project.video && project.images && project.images.length > 1"
                     (click)="nextImage($event, project)"

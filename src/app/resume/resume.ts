@@ -9,29 +9,37 @@ import { Component } from '@angular/core';
 })
 export class Resume {
   projects = [
-  {
-    id: 1,
-    number: '01',
-    name: 'Personal Portfolio Website',
-    type: 'Tools Used: HTML, CSS, Tailwind, JavaScript, Figma',
-    description: 'A personal portfolio website built to showcase my expertise, featured projects, and technical skills in a clear and structured layout.',
-    link: '#'
-  },
-  {
-    id: 2,
-    number: '02',
-    name: 'Campo Noble Website',
-    type: 'Tools Used: HTML, CSS, Tailwind, JavaScript, Figma',
-    description: 'A modern restaurant website showcasing Campo Noble’s ambiance, menu, and services with an elegant and user-friendly design.',
-    link: '#'
-  },
-  {
-    id: 3,
-    number: '03',
-    name: 'ArtsRising Blog Website',
-    type: 'Tools Used: HTML, CSS, WordPress',
-    description: 'A creative blog platform dedicated to promoting art, artists, and inspiring stories through visually engaging content.',
-    link: '#'
-  }
-];
+    {
+      id: 1,
+      number: '01',
+      name: 'La Hermosa – Flower Shop Website',
+      type: 'Tools Used: HTML, Tailwind CSS, AngularJS',
+      description: 'UI/UX Designer & Front-End Developer. A responsive flower shop website with organized product and service displays, built for a clean user experience.',
+      link: '#'
+    },
+    {
+      id: 2,
+      number: '02',
+      name: 'Pinatubo Museum – Interactive Kiosk',
+      type: 'Tools Used: HTML, Tailwind CSS, AngularJS',
+      description: 'UI/UX Designer & Front-End Developer. Helped develop an interactive museum kiosk with educational content about the 1991 Mount Pinatubo eruption, and created the welcome page and interactive button pages.',
+      link: '#'
+    },
+    {
+      id: 3,
+      number: '03',
+      name: 'Campo Noble – Coffee Shop Website',
+      type: 'Tools Used: Figma',
+      description: 'UI/UX Designer. A UI/UX design concept for a restaurant with strong branding and a structured layout, designed to enhance engagement and deliver a seamless user experience.',
+      link: '#'
+    },
+    {
+      id: 4,
+      number: '04',
+      name: 'Dre Photography – Portfolio Website',
+      type: 'Tools Used: Figma, HTML, Tailwind CSS, AngularJS',
+      description: 'UI/UX Designer & Web Developer. A responsive photography portfolio showcasing curated images in a clean and elegant layout.',
+      link: '#'
+    }
+  ];
 }
